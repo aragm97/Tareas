@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es"><!-- Se cambió el idioma a español -->
 
 <head>
   <meta charset="UTF-8">
@@ -8,15 +8,16 @@
   <link rel="stylesheet" type="text/css" media="screen" href="./styles.css">
   <title>Formulario</title>
 </head>
-<body>
+<header><!-- se hace uso de html semantico -->
   <h1>Bienvenidos a mi fiesta</h1>
   <h2>Por favor, confirmar asistencia:</h2>
-
+</header>
+<body>
   <form class="formulario">
-    Nombre <input type="text" name="name" id="name">
-    <br />
-    Edad <input type="number" name="age" id="age">
-    <br />
+    Nombre <input type="text" name="name" id="name" required>
+    <br>
+    Edad <input type="number" name="age" id="age" required><!-- se agregó required para que sea obligatorio poner los datos  -->
+    <br>
 
     Nacionalidad
     <select name="nationality" id="nationality">
@@ -26,15 +27,16 @@
       <option value="vnzl">Venezolana</option>
     </select>
     <br />
-    <input type="submit">
+    <input class="btn-confirmar" type="submit" value="Asistiré a la fiesta :D"><!-- agregué una clase y cambié el texto del botón a algo más relacionado a la temática -->
   </form>
 
   <div>
-    <h2>Lista de invitados</h2>
+    <h2 id="lista-de-invitados">Lista de invitados</h2> <!-- se agregó un id para relacionarlo con el archivo de js -->
 
   </div>
 
-  <script src="../formulario.js"></script>
+  <script src="formulario.js"></script> <!-- Se cambió la dirección al archivo js para que dirija al archivo correctamente -->
 </body>
 
 </html>
+
